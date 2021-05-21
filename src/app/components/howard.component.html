@@ -1,0 +1,117 @@
+<div ng-init="onInit()" >
+    <!-- se invoca al componente header -->
+    <app-header></app-header>
+    <!-- Masthead-->
+    <header class="masthead h-75">
+        <div class="container d-flex h-100 align-items-center pt-140">
+            <div class="mx-auto text-center sombra">
+                <h1 class="mx-auto my-0 text-uppercase">Howard</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">El Colegio Hogwarts de Magia y Hechicería fue distribuida, en las diferentes casas: Gryffindor, donde van los valientes de corazón; Hufflepuff, donde son justos y leales; Ravenclaw, a donde pertenecen los inteligentes y sabios; y Slytherin, donde son audaces y ambiciosos.</h2>
+                <a class="btn btn-primary js-scroll-trigger" href="#projects">Casas de Estudio</a>
+            </div>
+        </div>
+    </header>
+    <!-- Projects-->
+    <section class="projects-section bg-light" id="projects">
+        <div class="container">
+            <!-- Featured Project Row-->
+            <h1 class="mx-auto my-0 text-uppercase">Casa es Estudio</h1>
+            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                <div class="form-group mb-3">
+                    <label for="exampleFormControlSelect1">Elije la casa de estudio</label>
+                    <select (change)="onAtrapaPersonaje($event)" class="form-control" id="inputGroupSelect01">
+                      <option value="">Elige</option>
+                      <option value="slytherin">Slytherin</option>
+                      <option value="gryffindor">Gryffindor</option>
+                      <option value="ravenclaw">Ravenclaw</option>
+                      <option value="hufflepuff">Hufflepuff</option>
+                    </select>
+                </div>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Patronus</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <!-- se recorre el arreglo para mostrarlo en la lista -->
+                      <tr *ngFor="let item of persnajes;let i=index">
+                        <th scope="row">
+                            <img class="img-fluid mb-3 mb-lg-0" src={{item.image}} alt="..." style="width: 200px;"/>
+                        </th>
+                        <td>{{ item.name }}</td>
+                        <td>{{ currentYear - item.yearOfBirth }}</td>
+                        <td>{{ item.patronus }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <!-- Project One Row-->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                <div class="col-lg-6"><img class="img-fluid" src="assets/img/slytherin.jpg" alt="..." /></div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white">Slytherin</h4>
+                                <p class="mb-0 text-white-50">Slytherin es una de las cuatro casas en las que se dividen los estudiantes del Colegio Hogwarts en el universo de ficción de los libros y películas de la saga Harry Potter.</p>
+                                <hr class="d-none d-lg-block mb-0 ml-0" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Two Row-->
+            <div class="row justify-content-center no-gutters">
+                <div class="col-lg-6"><img class="img-fluid" src="assets/img/gryffindor.jpg" alt="..." /></div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">Gryffindor</h4>
+                                <p class="mb-0 text-white-50">Gryffindor es una de las cuatro casas en las que se dividen los estudiantes del Colegio Hogwarts de Magia y Hechicería en los libros de Harry Potter.</p>
+                                <hr class="d-none d-lg-block mb-0 mr-0" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project One Row-->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                <div class="col-lg-6"><img class="img-fluid" src="assets/img/ravenclaw.jpg" alt="..." /></div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white">Ravenclaw</h4>
+                                <p class="mb-0 text-white-50">Ravenclaw es una de las cuatro casas en las que se dividen los estudiantes del Colegio Hogwarts de Magia y Hechicería en el universo de los libros y películas de Harry Potter.</p>
+                                <hr class="d-none d-lg-block mb-0 ml-0" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Two Row-->
+            <div class="row justify-content-center no-gutters">
+                <div class="col-lg-6"><img class="img-fluid" src="assets/img/hefflepuff.jpg" alt="..." /></div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">Hefflepuff</h4>
+                                <p class="mb-0 text-white-50">Hufflepuff es una de las cuatro casas en las que se dividen los estudiantes del Colegio Hogwarts de Magia y Hechicería en el universo de fantasía y ficción de los libros de Harry Potter.</p>
+                                <hr class="d-none d-lg-block mb-0 mr-0" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- se invoca el componente footer -->
+    <app-footer></app-footer>
+
+</div>

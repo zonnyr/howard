@@ -1,0 +1,50 @@
+<!-- se llama a esta funcion para que haga un llamado a las apis antes de la carga de la web -->
+<div ng-init="onInit()" >
+    <!-- se llama al componente header -->
+    <app-header></app-header>
+    <!-- Masthead-->
+    <header class="masthead masthead-3 h-50">
+        <div class="container d-flex h-100 align-items-center pt-140">
+            <div class="mx-auto text-center sombra">
+                <h1 class="mx-auto my-0 text-uppercase">Profesores</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">Durante la escolaridad de Harry, Albus Dumbledore es el director y los principales jefes de casa son los profesores McGonagall, Sprout, Flitwick y Snape.</h2>
+                <a class="btn btn-primary js-scroll-trigger" href="#projects">profesores</a>
+            </div>
+        </div>
+    </header>
+    <!-- Projects-->
+    <section class="projects-section bg-light" id="projects">
+        <div class="container">
+            <!-- Featured Project Row-->
+            <h1 class="mx-auto my-0 text-uppercase">Profesores</h1>
+            <!-- Featured Project Row-->
+            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Patronus</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <!-- se recorre el arreglo para mostrarlo en la lista -->
+                      <tr *ngFor="let item of profesores;let i=index">
+                        <th scope="row">
+                            <img class="img-fluid mb-3 mb-lg-0" src={{item.image}} alt="..." style="width: 200px;"/>
+                        </th>
+                        <td>{{ item.name }}</td>
+                        <td>{{ currentYear - item.yearOfBirth }}</td>
+                        <td>{{ item.patronus }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </section>
+    <!-- se llama al componente footer -->
+    <app-footer></app-footer>
+
+</div>

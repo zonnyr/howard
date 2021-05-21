@@ -1,0 +1,98 @@
+<!-- se llama a esta funcion para que haga un llamado a las apis antes de la carga de la web -->
+<div ng-init="onInit()" >
+    <!-- se llama al componente header -->
+    <app-header></app-header>
+    <!-- Masthead-->
+    <header class="masthead masthead-2 h-50">
+        <div class="container d-flex h-100 align-items-center pt-140">
+            <div class="mx-auto text-center sombra">
+                <h1 class="mx-auto my-0 text-uppercase">Estudiantes</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">La existencia del Expreso de Hogwarts permite que todos los estudiantes registrados puedan abordarlo en la estación de King's Cross en Londres para poder llegar a la estación del pueblo de Hogsmeade, al lado mismo de la escuela.</h2>
+                <a class="btn btn-primary js-scroll-trigger" href="#projects">Estudiantes</a>
+            </div>
+        </div>
+    </header>
+    <!-- Projects-->
+    <section class="projects-section bg-light" id="projects">
+        <div class="container">
+            <!-- Featured Project Row-->
+            <h1 class="mx-auto my-0 text-uppercase">Estudiantes</h1>
+            <!-- Featured Project Row-->
+            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                <!-- formulario de registro -->
+                <form class="form-group col-12" [formGroup]="profileForm" (ngSubmit)="onAgregarEstudiante()">
+                    <div class="form-row col-12">
+                        <div class="col">
+                            <label class="w-100">
+                                Imagen:
+                                <input type="url" class="form-control" placeholder="Link (PNG / JPG)" formControlName="image" value="{{ limpia }}" required>
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label class="w-100">
+                            Nombre:
+                            <input type="text"class="form-control" placeholder="Nombre" formControlName="name" value="{{ limpia }}" required>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-row col-12">
+                        <div class="col-5">
+                            <label class="w-100">
+                                Año de nacimiento:
+                              <input maxlength="4" min="0" max="2021" type="number" class="form-control" placeholder="Año" formControlName="ano" value="{{ limpia }}" required>
+                            </label>
+
+                        </div>
+                        <div class="col-5">
+                            <label class="w-100">
+                              Patronus:
+                              <input type="text" class="form-control" placeholder="Patronus" formControlName="patronus" value="{{ limpia }}" required>
+                            </label>
+
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-primary" type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+                        </div>
+                    </div>
+
+
+
+                  
+                </form>
+
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Patronus</th>
+                        <th scope="col">Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <!-- se recorre el arreglo para mostrarlo en la lista -->
+                      <tr *ngFor="let item of estudiantes;let i=index">
+                        <th scope="row">
+                            <img class="img-fluid mb-3 mb-lg-0" src={{item.image}} alt="..." style="width: 200px;"/>
+                        </th>
+                        <td>{{ item.name }}</td>
+                        <td>{{ currentYear - item.yearOfBirth }}</td>
+                        <td>{{ item.patronus }}</td>
+                        <td>
+                            <!-- boton para eliminar un registro en concreto -->
+                            <button class="btn btn-primary" (click)="eliminar(i)">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </section>
+    <!-- se llama al componente footer -->
+    <app-footer></app-footer>
+
+</div>
