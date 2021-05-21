@@ -46,7 +46,8 @@ export class EstudiantesComponent implements OnInit {
     ano: new FormControl('',[
       Validators.required,
       Validators.maxLength(4),
-      Validators.pattern("(0?[1-9]|[1-9][0-9][0-9]|[1][1-9][1-9][1-9]|2021)")
+      Validators.max(2021),
+      Validators.min(0),
     ]),
     patronus: new FormControl('',[
       Validators.required,
