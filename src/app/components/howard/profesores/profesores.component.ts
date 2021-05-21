@@ -22,8 +22,6 @@ export class ProfesoresComponent implements OnInit {
     this.howardService.getProfesores().subscribe(
       (data: any) =>{
         this.profesores = data;
-        console.log("this.profesores");
-        console.log(this.profesores);
       },
       (error) => {
         console.error(error);

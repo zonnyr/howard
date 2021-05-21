@@ -10244,6 +10244,11 @@ body {
   background-size: cover;
 }
 .masthead-2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../img/bg-howard-3.jpg") !important;
   background-position: center;
   background-repeat: no-repeat;
@@ -10251,7 +10256,12 @@ body {
   background-size: cover;
 }
 .masthead-3 {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../img/bg-howard.jpg") !important;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../img/bg-howard-2.jpg") !important;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;

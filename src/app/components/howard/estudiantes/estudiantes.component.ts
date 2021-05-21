@@ -25,8 +25,6 @@ export class EstudiantesComponent implements OnInit {
     this.howardService.getEstudiantes().subscribe(
       (data: any) =>{
         this.estudiantes = data;
-        console.log("this.estudiantes");
-        console.log(this.estudiantes);
       },
       (error) => {
         console.error(error);
@@ -57,6 +55,7 @@ export class EstudiantesComponent implements OnInit {
   // se llama a esta funcion para agregar un nuevo registro al arreglo y limpiar el formulario
   onAgregarEstudiante(){
     this.estudiantes.push(this.profileForm.value);
+    console.log(this.profileForm.value);
     this.limpia = " ";
     this.limpia = "";
   }
