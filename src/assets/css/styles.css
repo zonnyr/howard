@@ -65,9 +65,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: white;
   text-align: left;
-  background-color: #fff;
+  background-color: #10141b;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -1659,11 +1659,13 @@ pre code {
 .table th,
 .table td {
   padding: 0.75rem;
+  color: white;
   vertical-align: top;
   border-top: 1px solid #dee2e6;
 }
 .table thead th {
   vertical-align: bottom;
+  color: white;
   border-bottom: 2px solid #dee2e6;
 }
 .table tbody + tbody {
@@ -10149,7 +10151,7 @@ body {
 
 #mainNav {
   min-height: 3.5rem;
-  background-color: #fff;
+  background-color: #1c1314 !important;
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -10161,7 +10163,7 @@ body {
   outline: none;
 }
 #mainNav .navbar-brand {
-  color: #000000;
+  color: #fff;
   font-weight: 700;
   padding: 0.9rem 0;
 }
@@ -10184,15 +10186,15 @@ body {
   }
   #mainNav .navbar-brand {
     padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 1);
   }
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.90);
   }
   #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 1);
   }
   #mainNav .nav-link:active {
     color: #fff;
@@ -10316,7 +10318,7 @@ body {
 }
 
 .projects-section {
-  padding: 10rem 0;
+  padding: 2rem 0;
 }
 .projects-section .featured-text {
   padding: 2rem;

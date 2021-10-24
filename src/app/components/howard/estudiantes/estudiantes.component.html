@@ -8,12 +8,11 @@
             <div class="mx-auto text-center sombra">
                 <h1 class="mx-auto my-0 text-uppercase">Estudiantes</h1>
                 <h2 class="text-white-50 mx-auto mt-2 mb-5">La existencia del Expreso de Hogwarts permite que todos los estudiantes registrados puedan abordarlo en la estación de King's Cross en Londres para poder llegar a la estación del pueblo de Hogsmeade, al lado mismo de la escuela.</h2>
-                <a class="btn btn-primary js-scroll-trigger" href="#projects">Estudiantes</a>
             </div>
         </div>
     </header>
-    <!-- Projects-->
-    <section class="projects-section bg-light" id="projects">
+
+    <section class="projects-section">
         <div class="container">
             <!-- Featured Project Row-->
             <h1 class="mx-auto my-0 text-uppercase">Estudiantes</h1>
@@ -33,6 +32,22 @@
                             Nombre:
                             <input type="text"class="form-control" placeholder="Nombre" formControlName="name" value="{{ limpia }}" required>
                             </label>
+                        </div>
+                    </div>
+                    <div class="form-row col-12">
+                        <div class="col-6">
+                            <label class="w-100">
+                                Species:
+                                <input type="text"class="form-control" placeholder="Species" formControlName="species" value="{{ limpia }}" required>
+                            </label>
+
+                        </div>
+                        <div class="col-6">
+                            <label class="w-100">
+                                Gender:
+                                <input type="text"class="form-control" placeholder="gender" formControlName="gender" value="{{ limpia }}" required>
+                            </label>
+
                         </div>
                     </div>
                     <div class="form-row col-12">
@@ -66,6 +81,8 @@
                       <tr>
                         <th scope="col">Image</th>
                         <th scope="col">Name</th>
+                        <th scope="col">Species</th>
+                        <th scope="col">Gender</th>
                         <th scope="col">Age</th>
                         <th scope="col">Patronus</th>
                         <th scope="col">Delete</th>
@@ -78,6 +95,8 @@
                             <img class="img-fluid mb-3 mb-lg-0" src={{item.image}} alt="..." style="width: 200px;"/>
                         </th>
                         <td>{{ item.name }}</td>
+                        <td>{{ item.species }}</td>
+                        <td>{{ item.gender }}</td>
                         <td>{{ currentYear - item.yearOfBirth }}</td>
                         <td>{{ item.patronus }}</td>
                         <td>

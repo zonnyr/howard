@@ -41,6 +41,12 @@ export class EstudiantesComponent implements OnInit {
     name: new FormControl('',[
       Validators.required,
     ]),
+    species: new FormControl('',[
+      Validators.required,
+    ]),
+    gender: new FormControl('',[
+      Validators.required,
+    ]),
     ano: new FormControl('',[
       Validators.required,
       Validators.maxLength(4),

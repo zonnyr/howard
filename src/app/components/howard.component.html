@@ -7,12 +7,11 @@
             <div class="mx-auto text-center sombra">
                 <h1 class="mx-auto my-0 text-uppercase">Howard</h1>
                 <h2 class="text-white-50 mx-auto mt-2 mb-5">El Colegio Hogwarts de Magia y Hechicería fue distribuida, en las diferentes casas: Gryffindor, donde van los valientes de corazón; Hufflepuff, donde son justos y leales; Ravenclaw, a donde pertenecen los inteligentes y sabios; y Slytherin, donde son audaces y ambiciosos.</h2>
-                <a class="btn btn-primary js-scroll-trigger" href="#projects">Casas de Estudio</a>
             </div>
         </div>
     </header>
-    <!-- Projects-->
-    <section class="projects-section bg-light" id="projects">
+
+    <section class="projects-section" >
         <div class="container">
             <!-- Featured Project Row-->
             <h1 class="mx-auto my-0 text-uppercase">Casa es Estudio</h1>
@@ -32,6 +31,8 @@
                       <tr>
                         <th scope="col">Image</th>
                         <th scope="col">Name</th>
+                        <th scope="col">Species</th>
+                        <th scope="col">Gender</th>
                         <th scope="col">Age</th>
                         <th scope="col">Patronus</th>
                       </tr>
@@ -43,6 +44,8 @@
                             <img class="img-fluid mb-3 mb-lg-0" src={{item.image}} alt="..." style="width: 200px;"/>
                         </th>
                         <td>{{ item.name }}</td>
+                        <td>{{ item.species }}</td>
+                        <td>{{ item.gender }}</td>
                         <td>{{ currentYear - item.yearOfBirth }}</td>
                         <td>{{ item.patronus }}</td>
                       </tr>
